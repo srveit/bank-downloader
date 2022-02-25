@@ -1,0 +1,14 @@
+.nyc_output
+log/*.log.*
+*.log
+tmp/**/*
+doc/api
+doc/app
+*~
+*#*
+.DS_Store
+node_modules
+.lock-wscript
+.scannerwork
+coverage
+reports

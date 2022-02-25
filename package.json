@@ -1,0 +1,91 @@
+{
+  "name": "bank-downloader",
+  "version": "1.0.0",
+  "description": "Automates retrieving bank account information and transactions",
+  "keywords": [
+    "financial",
+    "bank",
+    "downloader"
+  ],
+  "homepage": "https://github.com/srveit/bank-downloader#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srveit/bank-downloader.git"
+  },
+  "bugs": {
+    "email": "steve@veitconsulting.com",
+    "url": "https://github.com/srveit/bank-downloader/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Stephen R. Veit",
+    "email": "steve@veitconsulting.com",
+    "url": "http://veitconsulting.com"
+  },
+  "contributors": [],
+  "main": "index.js",
+  "bin": {},
+  "man": [],
+  "config": {},
+  "scripts": {
+    "docs": "jsdoc --configure .jsdocrc.json",
+    "lint": "eslint . --ext .js,.json",
+    "lint-markdown": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
+    "test": "jest --detectOpenHandles"
+  },
+  "watch": {
+    "lint": {
+      "patterns": [
+        "index.js",
+        "{lib,spec}/*.js"
+      ],
+      "quiet": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageProvider": "v8",
+    "coverageDirectory": "./coverage/",
+    "coverageReporters": [
+      "clover",
+      "json",
+      "html",
+      "text-summary"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 75
+      }
+    }
+  },
+  "dependencies": {
+    "mechanize": "^1.2.1"
+  },
+  "devDependencies": {
+    "@jest/reporters": "^27.5.1",
+    "ajv": "^8.10.0",
+    "ajv-keywords": "^5.1.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-standard": "github:standard/eslint-config-standard",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "jest-extended": "^2.0.0",
+    "jest-html-reporter": "^3.4.2",
+    "jest-spec-reporter": "^1.0.17",
+    "jsdoc": "^3.6.10",
+    "markdownlint-cli2": "^0.4.0",
+    "standard": "^16.0.4"
+  },
+  "bundledDependencies": [],
+  "engines": {
+    "node": ">= 14.0.0"
+  }
+}
